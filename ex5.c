@@ -7,7 +7,22 @@
 #include <assert.h>
 #include "ex5.h"
 
-void
+int
 ex5(node *n) {
-	assert(0);
+	int i;
+	int x;
+	do{
+		if(n==0)
+		{
+			return 1;
+		}
+		if(n->next==0)
+		{
+			return 1;
+		}
+		i=n->value;
+		n=n->next;
+		x=n->value;
+	}while(i<=x);
+	return 0;
 }
